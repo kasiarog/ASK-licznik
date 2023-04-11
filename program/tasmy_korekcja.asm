@@ -1,18 +1,19 @@
+org 0
 jmp start
 
 start:
 	setb P0.7	;wybranie dekodera
 	jmp select1
 
-select1:	;wybranie segmentu, na ktÛrym ma siÍ wyúwietlaÊ licznik
+select1:	;wybranie segmentu, na kt√≥rym ma siƒô wy≈õwietlaƒá licznik
 	setb P3.3
-	setb P3.4	;ustawienie bitu na P3.3 i P3.4, aby by≥ 1. wyúwietlac
+	setb P3.4	;ustawienie bitu na P3.3 i P3.4, aby by≈Ç 1. wy≈õwietlac
 	call defineA
 	call define10
 	call count
-	call delay		;øeby przerwa przy zmianie taúm by≥a d≥uøsza
+	call delay		;≈ºeby przerwa przy zmianie ta≈õm by≈Ça d≈Çu≈ºsza
 
-select2:		;analigicznie jak wczeúniej
+select2:		;analigicznie jak wcze≈õniej
 	clr P3.3
 	setb P3.4
 	call defineA
@@ -51,7 +52,6 @@ count:
 	;call delay
 	djnz R0, count
 	add A, #6
-	cjne A, #64, define10
 	ret
 
 display0:
@@ -114,41 +114,6 @@ display9:
 	mov P1, R1
 	call delay
 	mov P1, #0ffh
-	call delay
-	ret
-display10:
-	cjne A, #10, display11
-	mov R1, #090h	;10
-	mov P1, R1
-	call delay
-	ret
-display11:
-	cjne A, #11, display12
-	mov R1, #090h	;10
-	mov P1, R1
-	call delay
-	ret
-display12:
-	cjne A, #12, display13
-	mov R1, #090h	;10
-	mov P1, R1
-	call delay
-	ret
-display13:
-	cjne A, #13, display14
-	mov R1, #090h	;10
-	mov P1, R1
-	call delay
-	ret
-display14:
-	cjne A, #14, display15
-	mov R1, #090h	;10
-	mov P1, R1
-	call delay
-	ret
-display15:
-	mov R1, #090h	;10
-	mov P1, R1
 	call delay
 	ret
 
