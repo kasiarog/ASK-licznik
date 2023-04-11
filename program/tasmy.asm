@@ -1,16 +1,17 @@
+org 0
 jmp start
 
 start:
 	setb P0.7	;wybranie dekodera
 	jmp select1
 
-select1:	;wybranie segmentu, na którym ma siê wyœwietlaæ licznik
+select1:	;wybranie segmentu, na ktÃ³rym ma siÃª wyÅ“wietlaÃ¦ licznik
 	setb P3.3
-	setb P3.4	;ustawienie bitu na P3.3 i P3.4, aby by³ 1. wyœwietlac
+	setb P3.4	;ustawienie bitu na P3.3 i P3.4, aby byÂ³ 1. wyÅ“wietlac
 	call display
-	call delay		;¿eby przerwa przy zmianie taœm by³a d³u¿sza
+	call delay		;Â¿eby przerwa przy zmianie taÅ“m byÂ³a dÂ³uÂ¿sza
 
-select2:		;analigicznie jak wczeœniej
+select2:		;analigicznie jak wczeÅ“niej
 	clr P3.3
 	setb P3.4
 	call display
