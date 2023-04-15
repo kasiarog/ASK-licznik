@@ -1,5 +1,5 @@
-# Licznik dla pasa produkcyjnego w asemblerze
-Architektura Systemów Komputerowych
+# Architektura Systemów Komputerowych
+Licznik dla pasa produkcyjnego w asemblerze
 
 ********Treść zadania********
 
