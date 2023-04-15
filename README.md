@@ -1,4 +1,4 @@
-# ASK - licznik dla pasa produkcyjnego w asemblerze
+# Licznik dla pasa produkcyjnego w asemblerze
 Architektura Systemów Komputerowych
 
 ********Treść zadania********
